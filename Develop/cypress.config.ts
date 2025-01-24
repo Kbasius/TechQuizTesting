@@ -9,6 +9,7 @@ export default defineConfig({
       viteConfig: customViteConfig,
     },
     specPattern: "cypress/component/**/*.cy.{js,ts,jsx,tsx}",
+    supportFile: "cypress/support/component.ts",
   },
   e2e: {
     baseUrl: 'http://localhost:3001',
