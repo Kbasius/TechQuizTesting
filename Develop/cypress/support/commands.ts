@@ -1,4 +1,13 @@
 /// <reference types="cypress" />
+import { mount } from '@cypress/react';
+declare global {
+    namespace Cypress {
+      interface Chainable {
+        mount: typeof mount;
+      }
+    }
+  }
+Cypress.Commands.add('mount', mount);
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
